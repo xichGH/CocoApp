@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/abouticon"
+        android:iconTint="@color/white"
+        android:title="About"
+        android:textColor="@color/white" />
+    <item
+        android:id="@+id/FAQFragment"
+        android:icon="@drawable/faqicon"
+        android:iconTint="@color/white"
+        android:title="FAQ"
+        android:textColor="@color/white" />
+    <item
+        android:id="@+id/videosFragment"
+        android:icon="@drawable/videosicon"
+        android:iconTint="@color/white"
+        android:title="Videos"
+        android:textColor="@color/white" />
+</menu>
