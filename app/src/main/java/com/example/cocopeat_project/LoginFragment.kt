@@ -1,13 +1,16 @@
 package com.example.cocopeat_project
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.cocopeat_project.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -33,7 +36,7 @@ class LoginFragment : Fragment() {
             ViewModelProvider(
                 this, viewModelFactory)[LoginViewModel::class.java]
 
-        binding.btnRegister.setOnClickListener { view: View ->
+        binding.textSignUpNow.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
@@ -49,7 +52,7 @@ class LoginFragment : Fragment() {
             loginViewModel.doneNavigating()
         })
 
-        binding.loginViewModel = loginViewModel
+        binding.loginViewModel= loginViewModel
 
         binding.setLifecycleOwner(this)
         return binding.root

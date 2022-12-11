@@ -1,5 +1,18 @@
 package com.example.cocopeat_project
 
+
+import android.annotation.SuppressLint
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.example.cocopeat_project.R
+import com.example.cocopeat_project.UserDao
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+
 class LoginViewModel (val database: UserDao,
                           application: Application
     ) : AndroidViewModel(application) {
@@ -39,7 +52,4 @@ class LoginViewModel (val database: UserDao,
                 }
             }
         }
-
-
     }
-}
