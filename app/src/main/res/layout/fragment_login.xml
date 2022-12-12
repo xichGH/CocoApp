@@ -38,13 +38,12 @@
             android:id="@+id/textRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="20dp"
             android:text="Login"
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/template" />
 
@@ -64,14 +63,13 @@
             android:id="@+id/buttonSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="#C8DBBE"
             android:onClick="@{()->loginViewModel.loginButton()}"
             android:text="Sign In"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
 
@@ -79,30 +77,32 @@
             android:id="@+id/textSignUpNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="70dp"
-            android:text="Sign Up now."
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
             android:onClick="@{()->loginViewModel.signUP()}"
+            android:text="Sign Up now."
+            android:textColor="@color/white"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toEndOf="@+id/desc1"
             app:layout_constraintTop_toBottomOf="@+id/buttonSignIn"
-            app:layout_constraintVertical_bias="0.204" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/desc1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
             android:text="Didn't have any Account?"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonSignIn"
-            app:layout_constraintVertical_bias="0.204" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/loginUsername"
@@ -113,6 +113,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:hint="Enter Username"
+            app:boxBackgroundColor="@color/header"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -123,10 +124,10 @@
                 android:id="@+id/username_edit_text"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
+                android:text="@={loginViewModel.inputUsername}"
                 android:inputType="text"
                 android:maxLength="20"
                 android:maxLines="1"
-                android:text="@={loginViewModel.inputUsername}"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -139,6 +140,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:hint="Enter Password"
+            app:boxBackgroundColor="@color/header"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -150,6 +152,7 @@
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:maxLines="1"
                 android:text="@={loginViewModel.inputPassword}"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
