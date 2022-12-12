@@ -19,10 +19,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-@Entity(tableName = "user_table")
+@Entity(tableName = "new_user_table")
 data class User (
     @PrimaryKey(autoGenerate = true)
-    var userId: Long = 0L,
+    var userId: Int = 0,
 
     @ColumnInfo(name = "firstname")
     var firstname: String,

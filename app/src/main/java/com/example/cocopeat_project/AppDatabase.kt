@@ -11,11 +11,13 @@ abstract class AppDatabase : RoomDatabase() {
     abstract val userDao: UserDao
 
     companion object {
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
         fun getInstance(context: Context): AppDatabase {
             synchronized(this) {
+
                 var instance = INSTANCE
 
                 if (instance == null) {
@@ -26,6 +28,7 @@ abstract class AppDatabase : RoomDatabase() {
                     )
                         .fallbackToDestructiveMigration()
                         .build()
+
                     INSTANCE = instance
                 }
                 return instance

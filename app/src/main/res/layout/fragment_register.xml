@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.cocopeat_project.RegisterFragment">
 
+    <data>
+        <variable
+            name="registerViewModel"
+            type="com.example.cocopeat_project.RegisterViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/registerConstraint"
         android:layout_width="match_parent"
@@ -12,20 +18,22 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="200sp"
-            android:layout_height="200sp"
+            android:layout_width="139dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="24dp"
             android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.456"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/template"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="421dp"
+            android:layout_height="717dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/template"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo" />
 
@@ -33,14 +41,14 @@
             android:id="@+id/textRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="28dp"
             android:text="Register"
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/template" />
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
 
         <TextView
             android:id="@+id/textCreate"
@@ -55,129 +63,185 @@
             app:layout_constraintTop_toBottomOf="@+id/textRegister" />
 
 
-        <EditText
-            android:id="@+id/editLastname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:hint="Last Name"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#FFFFFF"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editFirstname" />
-
-        <EditText
-            android:id="@+id/editUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:hint="Username"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#FFFFFF"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editLastname" />
-
-        <EditText
-            android:id="@+id/editFirstname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:hint="First Name"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#FFFFFF"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textCreate" />
-
-        <EditText
-            android:id="@+id/editPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:minHeight="48dp"
-            android:textColor="#FFFFFF"
-            android:textColorHighlight="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textColorLink="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editUsername" />
-
-        <TextView
-            android:id="@+id/textSignUpNow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="By creating an account, I agree to the Terms and Conditions"
-            android:textColor="#FFFFFF"
-            android:textSize="10sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editPassword" />
-
         <Button
             android:id="@+id/buttonSignUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#C8DBBE"
+            android:layout_width="349dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/pistachio"
+            android:onClick="@{()->registerViewModel.registerButton()}"
             android:text="Sign Up"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textSignUpNow" />
+            app:layout_constraintTop_toBottomOf="@+id/entryPassword" />
+
+        <TextView
+            android:id="@+id/textSignInNow2"
+            android:layout_width="83dp"
+            android:layout_height="17dp"
+            android:layout_marginBottom="40dp"
+            android:text="Sign In now."
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSignInNow"
+            app:layout_constraintVertical_bias="0.733" />
 
         <TextView
             android:id="@+id/textSignInNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
             android:layout_marginBottom="20dp"
             android:text="Already have an account?"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
+            app:layout_constraintTop_toBottomOf="@+id/textSignUpNow"
+            app:layout_constraintVertical_bias="0.19" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/entryFirstName"
+            style="@style/Widget.Cocopeat_project.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:hint="First Name"
+            android:maxLength="20"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/header"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:counterEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCreate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="@={registerViewModel.inputFirstName}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/entryLastName"
+            style="@style/Widget.Cocopeat_project.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Last Name"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/header"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:boxStrokeErrorColor="#D8CB3B"
+            app:counterEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/entryFirstName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="@={registerViewModel.inputLastName}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/entryUsername"
+            style="@style/Widget.Cocopeat_project.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Username"
+            android:maxLength="20"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/header"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:boxStrokeErrorColor="#FFEB3B"
+            app:counterEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entryLastName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:text="@={registerViewModel.inputUsername}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/entryPassword"
+            style="@style/Widget.Cocopeat_project.TextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Password"
+            android:maxLength="20"
+            app:boxBackgroundColor="@color/header"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:counterEnabled="true"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entryUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:text="@={registerViewModel.inputPassword}"
+                app:layout_constraintTop_toBottomOf="@+id/entryUsername" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textSignInNow2"
+            android:id="@+id/textSignUpNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="70dp"
-            android:layout_marginBottom="20dp"
-            android:text="Sign In now."
+            android:layout_marginTop="16dp"
+            android:text="By creating an account, I agree to the Terms and Conditions"
             android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textSignInNow"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
