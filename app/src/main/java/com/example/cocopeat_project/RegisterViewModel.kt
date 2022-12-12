@@ -86,7 +86,7 @@ class RegisterViewModel(private val repository: RegistrationRepository,
                     inputLastName.value = null
                     inputUsername.value = null
                     inputPassword.value = null
-                    _navigateToLogin.value = true
+                    _navigateto.value = true
                 }
 
             }

@@ -123,6 +123,9 @@
                 android:id="@+id/username_edit_text"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
                 android:text="@={loginViewModel.inputUsername}"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
