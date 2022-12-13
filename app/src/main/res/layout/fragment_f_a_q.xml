@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.cocopeat_project.FAQFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/faqConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECE3DF">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textFAQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequently Asked Questions"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <ImageView
+            android:id="@+id/template2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/template2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFAQ" />
+
+        <TextView
+            android:id="@+id/textAboutDescription"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Q: What is this application?"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/template2" />
+
+        <TextView
+            android:id="@+id/textAboutDescription3"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:text="A: Coco Peat Sterilization let’s you operate the device anywhere and anytime."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAboutDescription" />
+
+        <TextView
+            android:id="@+id/textAboutDescription5"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:justificationMode="inter_word"
+            android:text="Q: Do I need internet connection to connect with my device? "
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAboutDescription3" />
+
+        <TextView
+            android:id="@+id/textAboutDescription4"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:text="A: Yes. This is to ensure you can access the device whenever you want."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAboutDescription5" />
+
+        <TextView
+            android:id="@+id/textAboutDescription6"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:justificationMode="inter_word"
+            android:text="Q: I have more questions that is not on this thread."
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAboutDescription4" />
+
+        <TextView
+            android:id="@+id/textAboutDescription8"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="cocopeat_sterilization.ask@tip.edu.ph"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAboutDescription7" />
+
+        <TextView
+            android:id="@+id/textAboutDescription7"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:text="A: Don’t hesitate to send a message to our developer:"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAboutDescription6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

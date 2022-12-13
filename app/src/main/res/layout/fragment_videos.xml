@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.cocopeat_project.VideosFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/videosConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECE3DF">
+
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:autoPlay="true"
+            app:videoId="97STC369hto"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/template2"
+            android:layout_width="wrap_content"
+            android:layout_height="700dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/template2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAbout" />
+
+        <TextView
+            android:id="@+id/textAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Learning Video"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view" />
+
+        <TextView
+            android:id="@+id/textAboutDescription"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:justificationMode="inter_word"
+            android:text="Coco Peat Sterilization is a mobile application designed to monitor and control the automated device wherever you go. Worry less, plant more!"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/template2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
